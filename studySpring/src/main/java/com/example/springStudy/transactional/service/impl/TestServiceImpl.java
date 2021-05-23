@@ -1,7 +1,7 @@
 package com.example.springStudy.transactional.service.impl;
 
 import com.example.springStudy.transactional.dto.TOne;
-import com.example.springStudy.transactional.mapper.TOneMapper;
+import com.example.springStudy.transactional.dao.TOneDao;
 import com.example.springStudy.transactional.service.TestService;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 @Service
 public class TestServiceImpl implements TestService {
     @Resource
-    private TOneMapper tOneMapper;
+    private TOneDao tOneDao;
 
     /**
      * 根据 id 查询
@@ -27,7 +27,7 @@ public class TestServiceImpl implements TestService {
      */
     @Override
     public TOne selectByPrimaryKey(Integer id){
-        TOne tOne = tOneMapper.selectByPrimaryKey(id);
+        TOne tOne = tOneDao.selectByPrimaryKey(id);
         return tOne;
     }
 
