@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: root
+    password: rootroot
+    url: jdbc:mysql://127.0.0.1:3306/test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filter:
+        config:
+          enabled: true
+mybatis: #配置文件版和注解版区别:主要是需要配置此处的mybatis
+#  mapper-locations: classpath*:com/example/springStudy/**/mapper/*Mapper.xml
+  mapper-locations: classpath*:src/main/java/com/example/springStudy/**/mapper/*Mapper.xml
+#  mapper-locations: classpath:mapper/**/*Mapper.xml
+  map-underscore-to-camel-case: true # true 开启驼峰命名匹配规则
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: false
+    map-underscore-to-camel-case: true
+
