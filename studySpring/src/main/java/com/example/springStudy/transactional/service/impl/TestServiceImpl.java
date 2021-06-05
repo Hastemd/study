@@ -4,6 +4,7 @@ import com.example.springStudy.transactional.dto.TOne;
 import com.example.springStudy.transactional.dao.TOneDao;
 import com.example.springStudy.transactional.service.TestService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -29,6 +30,14 @@ public class TestServiceImpl implements TestService {
     public TOne selectByPrimaryKey(Integer id){
         TOne tOne = tOneDao.selectByPrimaryKey(id);
         return tOne;
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public int insertOne(TOne entity) {
+        int insert = tOneDao.insert(entity);
+        int i = 1/0;
+        return insert;
     }
 
 }

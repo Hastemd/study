@@ -20,3 +20,6 @@ mybatis: #配置文件版和注解版区别:主要是需要配置此处的mybati
     aggressive-lazy-loading: false
     map-underscore-to-camel-case: true
 
+logging:
+  level:
+    root: debug
