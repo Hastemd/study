@@ -6,7 +6,8 @@
     <modules>
         <module>studySpring</module>
 		<module>annotation</module>
-	</modules>
+        <module>java8</module>
+    </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
