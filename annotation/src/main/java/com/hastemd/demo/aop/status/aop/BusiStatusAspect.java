@@ -2,15 +2,8 @@ package com.hastemd.demo.aop.status.aop;
 
 import com.hastemd.demo.aop.status.anno.BusinessStatusAnno;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * tx_business_status 表删除数据aop
@@ -18,7 +11,7 @@ import java.util.List;
  * @author lijie@ane56.com
  * @date 2020/12/7
  */
-@Aspect
+//@Aspect
 @Component
 @Slf4j
 public class BusiStatusAspect {
@@ -31,10 +24,10 @@ public class BusiStatusAspect {
      * @param joinPoint
      * @param businessStatusAnno
      */
-    @SuppressWarnings("Unchecked")
-    @After(value = "@annotation(businessStatusAnno)")
-    public void afterHandle(JoinPoint joinPoint, BusinessStatusAnno businessStatusAnno) {
-        log.info("执行了 Aspect 的, @After");
-        log.info("执行了 Aspect 的, @After");
-    }
+    //@SuppressWarnings("Unchecked")
+    //@After(value = "@annotation(businessStatusAnno)")
+    //public void afterHandle(JoinPoint joinPoint, BusinessStatusAnno businessStatusAnno) {
+    //    log.info("执行了 Aspect 的, @After");
+    //    log.info("执行了 Aspect 的, @After");
+    //}
 }
